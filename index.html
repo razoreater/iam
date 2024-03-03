@@ -1,15 +1,28 @@
 <script type="application/ld+json">
 {
   "@context": {
-    "foaf": "http://xmlns.com/foaf/0.1/"
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "schema": "https://schema.org/"
   },
-  "@id":"#me",
-  "@type":
-    "foaf:Person",
+  "@id":"https://razoreater.github.io/iam/#me",
+  "@type": "foaf:Person",
     "foaf:name":"Jens Deprez",
     "foaf:based_near":"https://www.wikidata.org/wiki/Q12997",
     "foaf:age":"40",
     "foaf:mbox":"jens.deprez@ugent.be",
-    "foaf:workplaceHomepage":"https://district09.gent"
+    "foaf:workplaceHomepage":"https://district09.gent",
+    "schema:memberof":"https://pietercolpaert.be/teaching/kg/#2023-2024",
+    "schema:knows":[
+    {
+      "@id":"https://colada.be/#me",
+      "foaf:name":"Matthias Vandermaesen",
+      "schema:memberof":"https://pietercolpaert.be/teaching/kg/#2023-2024"
+    },
+    {
+      "@id":"https://jensdesutter.github.io/#me",
+      "foaf:name":"Jens De Sutter",
+      "schema:memberof":"https://pietercolpaert.be/teaching/kg/#2023-2024"
+    }
+    ]
   }
 </script>
