@@ -2,7 +2,7 @@
   @prefix foaf: <http://xmlns.com/foaf/0.1/>.
   @prefix schema: <https://schema.org/>.
   @prefix xsd: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-  @prefix photo: <https://razoreater.github.io/pht/#>.
+  @prefix photo <https://razoreater.github.io/pht/#>.
 
   <https://razoreater.github.io/iam/#me> a foaf:Person;
     foaf:name "Jens Deprez"^^xsd:string;
@@ -12,4 +12,15 @@
     foaf:workplaceHomepage <https://district09.gent>;
     schema:memberOf <https://pietercolpaert.be/teaching/kg/#2023-2024>;
     foaf:knows <https://colada.be/#me>, <https://jensdesutter.github.io/#me>, <https://nicovervaeck.github.io/#me>, <https://users.ugent.be/~alatinis/>, <https://liadsmed.github.io/#me>.
+
+  <https://avatars.githubusercontent.com/u/16701687?v=4> photo:depicts <https://razoreater.github.io/iam/#me>;
+    photo:depiction "Jens is holding a rooster, why we do not know"^^xsd:string;
+    photo:title "Current profile picture of Jens Deprez on Github"^^xsd:string;
+    photo:name "Jens Deprez"^^xsd:string.
+
+  <https://github.com/razoreater/iam/blob/main/ai.jpg?raw=true> photo:depicts <https://razoreater.github.io/iam/#me>;
+    photo:depiction "Jens as imagined by an AI"^^xsd:string;
+    photo:title "Old profile picture of Jens Deprez on Github"^^xsd:string;
+    photo:name "Jens Deprez"^^xsd:string;
+    photo:creationDate "2024-03-19"^^xsd:date.
 </script>
