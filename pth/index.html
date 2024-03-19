@@ -6,8 +6,48 @@
   @prefix photo: <https://razoreater.github.io/pht/#>.
 
   photo:Photo
-  a rdfs:Class, owl:Class;
-  rdfs:subClassOf foaf:Image;
-  rdfs:comment "A photo of a certain subject";
-  rdfs:label "photo".
+    a rdfs:Class, owl:Class;
+    rdfs:subClassOf foaf:Image;
+    rdfs:comment "A photo of a certain subject";
+    rdfs:label "photo".
+
+  photo:depicts
+    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty;
+    rdfs:subPropertyOf foaf:depicts;
+    rdfs:comment "Indicates who the image depicts.";
+    rdfs:label "depicts";
+    rdfs:domain photo:Photo;
+    rdfs:range foaf:Person;
+    owl:inverseOf photo:depicted.
+
+  photo:depiction
+    a rdf:Property, owl:ObjectProperty, owl:InverseFunctionalProperty;
+    rdfs:subPropertyOf foaf:depiction;
+    rdfs:comment "Indicates the contents of said picture.";
+    rdfs:label "depiction";
+    rdfs:domain foaf:Person;
+    rdfs:range photo:Photo; 
+    owl:inverseOf photo:depicts.
+
+  photo:title
+    a rdf:Property, owl:DatatypeProperty;
+    rdfs:comment "Title of a photo.";
+    rdfs:label "title";
+    rdfs:domain photo:Photo;
+    rdfs:range rdfs:Literal.
+
+  photo:name 
+    a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    rdfs:subClassOf foaf:name;
+    rdfs:comment "Name of the subject of a photo.";
+    rdfs:label "name";
+    rdfs:domain photo:Photo;
+    rdfs:range rdfs:Literal.
+
+  photo:creationDate
+    a rdf:Property, owl:DatatypeProperty;
+    rdfs:comment "When the original photo was taken, in following syntax (YYYY-MM-DD).";
+    rdfs:label "date";
+    rdfs:domain photo:Photo;
+    rdfs:range rdfs:Literal.
 </script>
